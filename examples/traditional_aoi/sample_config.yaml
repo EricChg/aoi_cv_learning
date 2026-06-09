@@ -1,0 +1,45 @@
+roi:
+  x: 0
+  y: 0
+  width: null
+  height: null
+
+preprocess:
+  grayscale: true
+  blur_kernel: 3
+  illumination:
+    method: divide
+    background_kernel: 51
+
+threshold:
+  method: otsu
+  fixed_value: 40
+  adaptive_block_size: 35
+  adaptive_c: 5
+  invert: false
+
+edges:
+  canny_low: 50
+  canny_high: 150
+  include_edges: false
+
+morphology:
+  open_kernel: 3
+  close_kernel: 5
+
+connected_components:
+  min_area: 20
+  max_area: null
+  min_width: 2
+  min_height: 2
+  max_aspect_ratio: null
+
+calibration:
+  board_cols: 9
+  board_rows: 6
+  square_size_mm: 25.0
+  min_valid_images: 3
+
+normal_stats:
+  resize_width: null
+  resize_height: null

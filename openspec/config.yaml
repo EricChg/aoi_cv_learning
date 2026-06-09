@@ -1,0 +1,13 @@
+# openspec/config.yaml
+schema: spec-driven
+
+context: |
+  Language: always in simplify Chinese，except tech terms in English
+
+rules:
+  proposal:
+    - Include rollback plan
+    - Identify affected teams
+  specs:
+    - Use Given/When/Then format
+    - Reference existing patterns before inventing new one
